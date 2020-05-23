@@ -107,4 +107,9 @@ class RichCodeEditingController extends ValueNotifier<TextEditingValue> implemen
   void clearComposing() {
     value = value.copyWith(composing: TextRange.empty);
   }
+  
+  @override
+  bool isSelectionWithinTextBounds(TextSelection selection) {
+    return true;
+  }
 }
